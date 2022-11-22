@@ -1,4 +1,4 @@
-;(function(){
+(function(){
 
 'use strict';
 
@@ -1473,7 +1473,7 @@ if(!!window.name)
 
 if(!PARAMS.DOMAIN||!PARAMS.APP_SID)
 {
-	BX24 = null;
+	/*BX24 = null; */
 	throw new Error('Unable to initialize Bitrix24 JS library!');
 }
 
