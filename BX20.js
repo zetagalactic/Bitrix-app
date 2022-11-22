@@ -1,4 +1,4 @@
-(function(){
+!(function(){
 
 'use strict';
 
@@ -1463,26 +1463,6 @@ var PARAMS = {
 	PLACEMENT_OPTIONS: null
 };
 
-if(!!window.name)
-{
-	var q = window.name.split('|');
-	PARAMS.DOMAIN = q[0].replace(/\:(80|443)$/, '');
-	PARAMS.PROTOCOL = parseInt(q[1])||0;
-	PARAMS.APP_SID = q[2];
-}
-
-if(!PARAMS.DOMAIN||!PARAMS.APP_SID)
-{
-	/*BX24 = null; */
-	throw new Error('Unable to initialize Bitrix24 JS library!');
-}
-
-/* bindings */
-BX24.bind(window, 'message', sendMessage.runCallback);
-
-util.ready();
-util.init();
-
-RestrictionManager = new RestrictionManager();
 
 })();
+undefined
