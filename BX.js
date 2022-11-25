@@ -1471,11 +1471,6 @@ if(!!window.name)
 	PARAMS.APP_SID = q[2];
 }
 
-if(!PARAMS.DOMAIN||!PARAMS.APP_SID)
-{
-	BX24 = null;
-	throw new Error('Unable to initialize Bitrix24 JS library!');
-}
 
 /* bindings */
 BX24.bind(window, 'message', sendMessage.runCallback);
